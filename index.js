@@ -9,22 +9,30 @@
 
 const http = require("http");
 const { handleReqRes } = require("./helpers/handleReqRes");
+const environmentToExport = require("./helpers/environments");
+const data = require("./lib/data");
 
 // app object -module scaffolding
 
 const app = {};
 
+// testing file stystem
+//  @TODO🚡 pore muche dibo
+data.read("test", "newFile", function (err, data) {
+  console.log(err, data);
+});
+
 //  configuration
-app.config = {
-  port: 3000,
-};
+// app.config = {
+//   port: 3000,
+// };
 
 // create server
 
 app.createServer = () => {
   const server = http.createServer(app.handleReqRes);
-  server.listen(app.config.port, () => {
-    console.log(`listening on port ${app.config.port}`);
+  server.listen(environmentToExport.port, () => {
+    console.log(`listening on port ${environmentToExport.port}`);
   });
 };
 
