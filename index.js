@@ -18,9 +18,14 @@ const app = {};
 
 // testing file stystem
 //  @TODO🚡 pore muche dibo
-data.read("test", "newFile", function (err, data) {
-  console.log(err, data);
-});
+data.update(
+  "test",
+  "newFile",
+  { name: "Enland", lag: "Englishs" },
+  function (err, data) {
+    console.log(err, data);
+  }
+);
 
 //  configuration
 // app.config = {
