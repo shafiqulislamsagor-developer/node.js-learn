@@ -6,9 +6,11 @@
  */
 
 const { sampleHandler } = require("../handlers/sampleHandlers/sampleHandlers");
+const { userHandler } = require("../handlers/userHandlers/userHandler");
 
 const routes = {
   sample: sampleHandler,
+  user: userHandler,
 };
 
 module.exports = routes;
