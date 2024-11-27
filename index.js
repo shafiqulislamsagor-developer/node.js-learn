@@ -18,9 +18,9 @@ const app = {};
 
 // testing file stystem
 //  @TODO🚡 pore muche dibo
-data.delete("test", "newFile", function (err, data) {
-  console.log(err, data);
-});
+// data.delete("test", "newFile", function (err, data) {
+//   console.log(err, data);
+// });
 
 //  configuration
 // app.config = {
